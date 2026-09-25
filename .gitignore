@@ -1,0 +1,14 @@
+# Secrets
+.env
+*.key
+*.pem
+credentials.json
+secrets.yml
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Real logs
+*.log
