@@ -34,6 +34,8 @@ python-fun-for-cybersecurity/
 ├── module-3-ai-workflow/
 ├── module-4-projects/
 ├── notes.md
+├── session-checklist.md
+├── README.md
 ├── CLAUDE.md
 ├── .gitignore
 └── .pre-commit-config.yaml
@@ -53,6 +55,10 @@ Follow standard Python best practices:
 - Short docstrings on functions. Comments explain *why*, not *what*.
 - Use `argparse` for CLI tools once the course covers it.
 - No hardcoded passwords, API keys, or tokens. Use environment variables or a placeholder value.
+
+## Sessions
+
+`session-checklist.md` lists what I do at the start and end of each study session. At the end of a session, remind me of anything from it I haven't done (notes entry, commit and push, progress update).
 
 ## Notes
 
