@@ -85,5 +85,5 @@ Responsible use: scripts only run against my own machine, local sample files, lo
 
 ## Progress
 
-- **Current:** Module 0, setup. The `kali-python` VM is built and reachable from VS Code over Remote-SSH.
-- **Next:** Create the GitHub repo, push the first commit from Kali with the pre-commit hook in place, run `setup_test.py`. Then finish the home lab checklist for the VM (backups, Uptime Kuma, Gitea mirror, docs in `proxmox-homelab`).
+- **Done:** Module 0 (setup). The `kali-python` VM is built, backed up, monitored, and documented in `proxmox-homelab`. The repo is on GitHub with the gitleaks hook and mirrored to Gitea. The Quick Test (`setup_test.py`) ran successfully.
+- **Next:** Module 1, Python basics.
