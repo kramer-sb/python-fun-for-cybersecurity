@@ -58,3 +58,16 @@ if feedback:
         print(f"- {item}")
 else:
     print("Nice work. This test password passed all checks. ")
+
+'''
+Challenge 1: Reject Common Words
+If the password contains the word password, add a warning.
+
+Challenge 2: Add a 100-Point Score
+Convert the score from 0-5 into a percentage.
+
+Challenge 3: Add a Space Check
+Add a recommendation if the password contains spaces.
+
+Challenge 4: Create a Report Function
+Create a function named print_password_report() that handles all output.'''
