@@ -2,7 +2,7 @@
 
 My coursework for **Coding for Cybersecurity: Python Fundamentals**, taught by Brandon S. Keath on [Just Hacking Training](https://www.justhacking.com/course/coding-for-cybersecurity-python-fundamentals/). The course teaches Python by building small security tools: log parsing, CLI tools, data parsing, reporting, and safe automation.
 
-I'm a beginner, so this repo is a learning log as much as a code collection. Everything here is typed, broken, and fixed by me as I work through the course.
+I'm a beginner, so this repo is a learning log as much as a code collection. Everything here is typed, broken, and fixed by me as I work through the course. View [my notes](notes.md) for specifics on each module/challenge/lab. 
 
 ## Repo structure
 
@@ -40,4 +40,4 @@ This repo is public, so it follows the same rules as my home lab repo:
 
 ## Status
 
-In progress. Currently on Module 0 (setup).
+In progress. Currently on Module 1 (python basics).
