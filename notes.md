@@ -22,3 +22,5 @@
 **Gotchas / errors I hit:** `git pull` failed with "fatal: Need to specify how to reconcile divergent branches." Cause: I edited README and notes in GitHub's web UI the day before, so the Kali clone was missing those commits. `git log --oneline --graph --all` showed the split. Use `q` to exit the pager.   
 
 **Questions to revisit:** Merge vs. rebase for shared repos.  Set `pull.rebase true` for this repo (local scope, not global).
+
+**Verified gitleaks:** Tested the pre-commit hook from VS Code Source Control with a scratch file containing a fake AWS-style access key (random characters, not a real credential). The commit was blocked. Gitleaks reported `RuleID: aws-access-token`, `File: gitleaks_test.py`, `Line: 2`. Deleted the scratch file afterward; nothing was committed or pushed.
