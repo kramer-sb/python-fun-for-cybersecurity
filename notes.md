@@ -50,3 +50,5 @@ Scenario: referring to separate auth.log, create a file & find how many failed l
 if "Failed password" in line:
 failed_attempts += 1
 ```
+
+## [1.8]Loops + Lists

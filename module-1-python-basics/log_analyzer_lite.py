@@ -7,7 +7,7 @@ def parse_log(file_path):
 
     with open(file_path, "r", encoding="utf-8") as file:
         for line in file:
-            if "Failed Password" in line:
+            if "Failed password" in line:
                 failed_attempts += 1
 
                 parts = line.split()
@@ -30,6 +30,5 @@ def parse_log(file_path):
     print(f"Total Failed Attempts: {failed_attempts}")
     print(f"IP Addresses: {', '.join(sorted(ip_addresses))}")
     print(f"Users: {', '.join(sorted(users))}")
-
 
 parse_log("auth.log")
