@@ -8,11 +8,13 @@ What to do at the start and end of each study session. One-time setup of the VM 
 2. **Resume the monitor** (if paused). Uptime Kuma (`https://kuma.lab`) > `kali-python Ping` > **Resume**.
 3. **Connect VS Code.** Remote-SSH: Connect to Host > `kali-python`. Bottom-left should say **SSH: kali-python**.
 4. **Open the repo.** File > Open Recent > `~/python-fun-for-cybersecurity`.
-5. **Check the repo is clean.** In the VS Code terminal:
+5. **Check the repo is clean, then pull.**
 
    ```bash
    git status
+   git pull
    ```
+   Pull second, so leftover changes don't tangle with incoming ones.
 
    "Nothing to commit, working tree clean" means last session was wrapped up properly. If there are leftover changes, commit or discard them before starting new work.
 6. **Activate the venv** if the lab uses one:
@@ -28,7 +30,8 @@ What to do at the start and end of each study session. One-time setup of the VM 
 
 - Commit after each lesson or working script, not just at the end. Small commits are easier to read back later.
 - Jot errors and gotchas in `notes.md` as they happen. They're easy to forget by the end.
-
+- Make every edit on the VM in VS Code, not in the GitHub web editor.
+  
 ## Ending a session
 
 1. **Update `notes.md`** with the lesson entry (ask Claude for one in the usual format if needed).
@@ -38,9 +41,9 @@ What to do at the start and end of each study session. One-time setup of the VM 
    git status
    git diff
    ```
-
    Look for anything that shouldn't be public: real IPs from outside the lab, usernames, passwords, real log files.
-3. **Commit and push:**
+3. **Update progress** when a module is finished or started: the Progress section in `CLAUDE.md` (repo and Claude Project copies) and the Status line in `README.md`.
+4. **Commit and push:**
 
    ```bash
    git add .
@@ -49,9 +52,8 @@ What to do at the start and end of each study session. One-time setup of the VM 
    ```
 
    Gitleaks runs on the commit. "Passed" means nothing secret-shaped was found.
-4. **Check it landed.** `git status` should say "Your branch is up to date with 'origin/main'." Committed is not the same as pushed.
-5. **Deactivate the venv** (if used): `deactivate`.
-6. **Update progress** when a module is finished: the Progress section in `CLAUDE.md` (repo and Claude Project copies) and the Status line in `README.md`.
+5. **Check it landed.** `git status` should say "Your branch is up to date with 'origin/main'." Committed is not the same as pushed.
+6. **Deactivate the venv** (if used): `deactivate`.
 7. **Pause the monitor.** Uptime Kuma > `kali-python Ping` > **Pause**, so it doesn't alert while the VM is off.
 8. **Shut down the VM.** Close VS Code, then Proxmox > 201 > **Shutdown** (not Stop). Or from the VS Code terminal before closing: `sudo shutdown now`.
 
@@ -64,3 +66,4 @@ What to do at the start and end of each study session. One-time setup of the VM 
 | `git push` rejected | GitHub has commits Kali doesn't (edited on the website?) | `git pull`, then push again |
 | Commit blocked by gitleaks | Something secret-shaped was staged | Read the output, remove the secret, `git add` again. Don't bypass the hook |
 | `pip install` says "externally-managed-environment" | venv not active | `source .venv/bin/activate` first |
+| `git pull` says "Need to specify how to reconcile divergent branches" | Local and GitHub each have commits the other lacks | `git pull --rebase`. In a fresh clone, run `git config pull.rebase true` once

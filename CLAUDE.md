@@ -92,4 +92,4 @@ Responsible use: scripts only run against my own machine, local sample files, lo
 ## Progress
 
 - **Done:** Module 0 (setup). The `kali-python` VM is built, backed up, monitored, and documented in `proxmox-homelab`. The repo is on GitHub with the gitleaks hook and mirrored to Gitea. The Quick Test (`setup_test.py`) ran successfully.
-- **Next:** Module 1, Python basics.
+- **Currently On:** Module 1, Python basics.
